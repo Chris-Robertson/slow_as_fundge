@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hacker Quotes</h1>
+<p>Search query: <%= @search_query %></p>
+<p>Database Size: <%= @hacker_quotes.count %></p>
+
+<h2>Total Time: <%= (@total_time * 1000).round(2) %> milliseconds</h2>
+
+<% @search_results.each do |line| %>
+  <li><%= line %></li=>
+<% end %>

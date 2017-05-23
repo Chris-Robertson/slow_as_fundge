@@ -1,0 +1,2 @@
+class HackerQuote < ApplicationRecord
+end

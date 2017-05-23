@@ -1,0 +1,22 @@
+<%= form_for(hacker_quote) do |f| %>
+  <% if hacker_quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hacker_quote.errors.count, "error") %> prohibited this hacker_quote from being saved:</h2>
+
+      <ul>
+      <% hacker_quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quote %>
+    <%= f.text_area :quote %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
